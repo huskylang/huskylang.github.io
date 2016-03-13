@@ -7,6 +7,7 @@ permalink: /docs/stdlib/cs
 
 :inl()
 --------
+
 gets input from user
 
 returns string

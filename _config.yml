@@ -17,14 +17,14 @@ example_script: >
     -scrpt greeting
 
 
-    cs:out('Your name ')
+    cs:out('Your name is ')
 
     name <- cs:inl() ;; Take name from stdin
 
 
     cs:outl('Hello ', name, '!')
 example_script_out: >
-    Your name Michael
+    Your name is Michael
 
     Hello Michael!
 

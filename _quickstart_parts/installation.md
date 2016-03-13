@@ -8,3 +8,4 @@ number: 1
     cd husky
     make test
     make
+    sudo make install
