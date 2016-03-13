@@ -1,10 +1,41 @@
+* {
+    box-sizing: content-box;
+}
+
+/**
+ * Mixins
+ *
+ */
+
+ @mixin hover-border-bottom-link () {
+    & > .marker {
+        width: auto !important;
+        text-align: center;
+        display: none;
+        margin-top: -25px;
+        color: $brand-color;
+    }
+
+    &:hover {
+        & > .marker {
+            display: block;
+        }
+    }
+ }
+
+
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    // border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+
+    .wrapper {
+        min-width: 80%;
+        vertical-align: middle;
+    }
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -15,8 +46,20 @@
     font-weight: 300;
     line-height: 56px;
     letter-spacing: -1px;
+    margin-top: 10px;
+    margin-left: 10px;
     margin-bottom: 0;
     float: left;
+
+    height: 50%;
+
+    vertical-align: middle;
+
+    outline: none !important;
+
+    text-decoration: none !important;
+
+    @include hover-border-bottom-link();
 
     &,
     &:visited {
@@ -39,6 +82,25 @@
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 20px;
+        }
+    }
+
+    .trigger {
+        margin-top: 20px;
+
+        > a {
+            float: right;
+            margin-bottom: 0;
+            margin-right: 25px;
+
+            .marker {
+                margin-top: 0 !important;
+            }
+
+            // display: inline-block;
+            text-decoration: none !important;
+
+            @include hover-border-bottom-link();
         }
     }
 
@@ -92,6 +154,17 @@
     }
 }
 
+.site-logo {
+    vertical-align: center;
+    text-align: center;
+    float: left;
+
+    &:hover {
+        svg *[fill=#{"'" + $brand-color + "'"}] {
+            fill: darken($brand-color, 5%);
+        }
+    }
+}
 
 
 /**
@@ -238,5 +311,35 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+/**
+ * Index
+ *
+ */
+
+.home {
+    text-align: center;
+
+    .home-heading {
+        font-size: 50px;
+    }
+
+    .home-features {
+        font-size: 20px;
+
+        .feature {
+            margin: 20px;
+        }
+
+        .delimiter {
+         color: $brand-color;
+        }
+    }
+
+    .home-code {
+        margin: 10%;
+        text-align: left;
     }
 }

@@ -2,7 +2,12 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    {% include icon-husky.html baseurl=site.baseurl %}
+
+    <a class="site-title" href="{{ site.baseurl }}/">
+      {{ site.title }}
+      <span class="marker">&bullet;</span>
+    </a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -14,9 +19,12 @@
       </a>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
+        {% for my_page in site.mainpages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
+              {{ my_page.title }}
+              <div class="marker">&bullet;</div>
+            </a>
           {% endif %}
         {% endfor %}
       </div>

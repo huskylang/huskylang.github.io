@@ -4,20 +4,29 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="home-heading">Create apps with power</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <div class="home-features">
+    <span class="feature">functional</span>
+    <span class="delimiter">&bullet;</span>
+    <span class="feature">elegant</span>
+    <span class="delimiter">&bullet;</span>
+    <span class="feature">robust</span>
+  </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="home-code">
+{% highlight clojure friendly %}
+{{ site.example_script }}
+{% endhighlight %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<h4>Output:</h4>
+
+{% highlight none %}
+{{ site.example_script_out }}
+{% endhighlight %}
+</div>
+
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
 
 </div>

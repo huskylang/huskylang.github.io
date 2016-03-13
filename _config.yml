@@ -6,16 +6,53 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Husky Programming Language
+email: mishavetl@gmail.com
+# description: >
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://huskylang.github.io" # the base hostname & protocol for your site
+github_reponame:  huskylang
+example_script: >
+    -scrpt greeting
+
+
+    cs:out('Your name ')
+
+    name <- cs:inl() ;; Take name from stdin
+
+
+    cs:outl('Hello ', name, '!')
+example_script_out: >
+    Your name Michael
+
+    Hello Michael!
+
+collections:
+    docpages:
+        output: true
+
+    mainpages:
+        output: true
 
 # Build settings
 markdown: kramdown
+
+gems:
+    - jekyll-assets
+
+# http://jekyll.github.io/jekyll-assets/
+assets:
+    # compress:
+    #     css: false | true | default - development: false, production: true
+    #     js: false | true | default - development: false, production: true
+    # cache: false | directory | default: .asset-cache
+    prefix: "/assets"
+    assets:
+        - "*.png"
+        - "*.svg"
+        - "bundle.css"
+    digest: true
+    sources:
+        - assets
+    features:
+        liquid: true
