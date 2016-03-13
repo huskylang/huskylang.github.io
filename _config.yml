@@ -12,7 +12,7 @@ description: >
     Create an issue on github, contact me or join a gitter char room if you have any questions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://huskylang.github.io" # the base hostname & protocol for your site
-github_reponame:  huskylang
+github_username:  huskylang
 example_script: >
     -scrpt greeting
 
@@ -45,22 +45,20 @@ collections:
 # Build settings
 markdown: kramdown
 
-gems:
-    - jekyll-assets
 
-# http://jekyll.github.io/jekyll-assets/
-assets:
-    # compress:
-    #     css: false | true | default - development: false, production: true
-    #     js: false | true | default - development: false, production: true
-    # cache: false | directory | default: .asset-cache
-    prefix: "/assets"
-    assets:
-        - "*.png"
-        - "*.svg"
-        - "bundle.css"
-    digest: true
-    sources:
-        - assets
-    features:
-        liquid: true
+# # http://jekyll.github.io/jekyll-assets/
+# assets:
+#     # compress:
+#     #     css: false | true | default - development: false, production: true
+#     #     js: false | true | default - development: false, production: true
+#     # cache: false | directory | default: .asset-cache
+#     prefix: "/assets"
+#     assets:
+#         - "*.png"
+#         - "*.svg"
+#         - "bundle.css"
+#     digest: true
+#     sources:
+#         - assets
+#     features:
+#         liquid: true
