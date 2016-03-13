@@ -9,7 +9,7 @@
 title: Husky Programming Language
 email: mishavetl@gmail.com
 description: >
-    Create an issue on github, contact me or join a gitter char room if you have any questions.
+    Create an issue on github, contact me or join a gitter chat room if you have any questions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://huskylang.github.io" # the base hostname & protocol for your site
 github_username:  huskylang
