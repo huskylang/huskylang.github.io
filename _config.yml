@@ -8,7 +8,8 @@
 # Site settings
 title: Husky Programming Language
 email: mishavetl@gmail.com
-# description: >
+description: >
+    Create an issue on github, contact me or join a gitter char room if you have any questions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://huskylang.github.io" # the base hostname & protocol for your site
 github_reponame:  huskylang
@@ -28,11 +29,18 @@ example_script_out: >
     Hello Michael!
 
 collections:
+    stdlibdoc_modules:
+        output: true
+
+    quickstart_parts:
+        output: false
+
     docpages:
         output: true
 
     mainpages:
         output: true
+
 
 # Build settings
 markdown: kramdown
